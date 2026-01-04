@@ -21,8 +21,7 @@ https://public.tableau.com/app/profile/eliza.wanye/viz/short_vs_long_youtube_vid
 ## SQL Query
 ```sql
 SELECT 
-    ROUND(AVG("viewCount")) AS avg_views,
-    COUNT(*) AS video_count,
+    ROUND(AVG("viewCount")) AS avg_views, COUNT(*) AS video_count,
     CASE 
         WHEN "durationSec" < 300 THEN 'Short'
         ELSE 'Long'
